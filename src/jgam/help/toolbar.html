@@ -1,0 +1,108 @@
+<!-- keywords for this file:
+help; content tree; search; navigation; help system
+-->
+<html>
+<head>
+	<title>JGammon - Backgammon for Java</title>
+</head>
+<body>
+
+<div align="center">
+	<h1>JGammon - Windows and Dialogs</h1>
+</div>
+<hr>
+<h2>The toolbar</h2>
+<center><img src="toolbar_de.png" width="610" height="42" border="0" alt=""></center>
+
+<p>
+	The toolbar originally is located right underneath the menu bar, but it floatable
+	and can be dragged with the move by gripping the "knob" to the left of the bar.
+	The bar can be shown as a window on its own or as a docked part of the main
+	window, on the top, left, right or bottom (top is recommended).
+</p>
+
+<p>
+	To each button an action during a game is assigned. If an action is not available <br>
+	at a time, the corresponding button will be disabled and cannot be pressed.
+</p>
+
+<p>The buttons have got the following actions assigned:</p>
+<table border="1">
+	<tr>
+		<th>Button</th>
+		<th>Action</th>
+	</tr>
+	<tr>
+		<td align="center"><img src="newgame.png" width="31" height="31" border="0" alt=""></td>
+		<td>Starts a new game. The
+			<a href="page:newGameDialog_de.html">new game dialog</a> pops up. If there is
+			already a game running, a little dialog will show up to confirm that the current
+			game will be aborted to start the new one.
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="save.png" width="31" height="31" border="0" alt=""></td>
+		<td>During a game the current board position can be saved by activating this button.
+			The Save-File-Dialog will appear, so that a file which describes the state of
+			the game, will be written to disk.
+			At a later time you can continue the game at exactly the position that you have
+			saved.
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="history.png" width="31" height="31" border="0" alt=""></td>
+		<td>Open the
+			<a href="page:history_de.html">history window</a> to analyse the game with.
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="turnboard.png" width="31" height="31" border="0" alt=""></td>
+		<td>Turn the board by a 180�.</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="flipboard.png" width="31" height="31" border="0" alt=""></td>
+		<td>"Flip" the board, i.e. swap "left" and "right". "Up" and "down" are kept
+			the way they are.
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="swap.png" width="31" height="31" border="0" alt=""></td>
+		<td>Exchange the colors of the players. Accordingly the messages will change too.</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="chat.png" width="31" height="31" border="0" alt=""></td>
+		<td>During a network game you can chat with your oponent if you press here.
+			The <a href="page:chatWindow_de.html">Chat window</a> will appear.
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="giveup.png" width="31" height="31" border="0" alt=""></td>
+		<td>During a game, if you think you will not win, you can propose to resign.
+			You choose the value of your resign proposal in the upcoming dialog box and
+			the other party may accept it or turn it down.
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="undo.png" width="31" height="31" border="0" alt=""></td>
+		<td>If you have already moved one or more checkers and want to undo these
+			moves, press this button. As soon as the oponent has thrown the dice, no undo
+			is possible any longer.
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="double.png" width="41" height="31" border="0" alt=""></td>
+		<td>If you think your position is extraordinarily good, you may double the value of
+			the game (see the <a href="page:rules.html">rules</a>). The other party may
+			take or drop your offer.
+		</td>
+	</tr>
+	<tr>
+		<td align="left" colspan="2">
+			<img align="left" src="throw_de.png" width="108" height="36" border="0" alt="" style="vertical-align:middle;">
+			It is your turn: Throw the dices.
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>

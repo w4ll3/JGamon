@@ -1,0 +1,15 @@
+#
+# This is the list of the available AI-Implementations
+#
+# If you create a AI Implementation yourself, ensure you have got a
+# META-INF/services/jgam.ai.AI file in the jar
+
+jgam.ai.MinimaxAI
+
+jgam.ai.InitialAI
+
+jgam.ai.RolloutInitialAI
+
+jgam.ai.RandomAI
+
+jgam.ai.GnuBgAI

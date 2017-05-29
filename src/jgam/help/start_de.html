@@ -1,0 +1,70 @@
+<!-- keywords for this file:
+Verkn�pfung; Batch; start;
+-->
+<html>
+<head>
+	<title>JGammon - Backgammon for Java</title>
+</head>
+<body>
+
+<div align="center">
+	<h1>JGammon - Einf&uuml;hrung</h1>
+</div>
+<hr>
+<h2>Starten von JGammon</h2>
+<p>Damit JGammon auf Ihrem Rechner funktionieren kann, m&uuml;ssen folgende
+	Bedingungen auf Ihrem Rechner erf&uuml;llt sein:
+<ul>
+	<li>Die Java Laufzeitumgebung <b>JRE</b> muss mindestens in der <b>Version 1.4</b>
+		installiert sein. Das JRE ist von der Firma SUN kostenlos f&uuml;r viele
+		Betriebssyteme erh&auml;ltlich (<u>java.sun.com</u>).<br>&nbsp;
+	</li>
+	<li>Eine grafische Oberfl&auml;che muss laufen (XWindows, unter Windows selbstverst&auml;ndlich).
+		Die Aufl&ouml;sung sollte mindestens 1024x768 betragen (muss aber nicht unbedingt)
+	</li>
+</ul>
+Wollen Sie die Dateien selbst &uuml;bersetzen, so wird ferner ben&ouml;tigt:
+<ul>
+	<li>ANT (<u>ant.apache.org</u>) in einer Version 1.6 oder neuer<br>&nbsp;</li>
+	<li>Java Development Kit in der Version 1.4 oder h&ouml;her. Dieses kann wie das JRE bei
+		SUN (<u>java.sun.com</u>) heruntergeladen werden.
+	</li>
+</ul>
+</p>
+
+<p>Um eine Version JGammon zu installieren, gehen Sie folgenderma&szlig;en vor:
+
+<ol type=1>
+	<li>Laden Sie eine neue Version von JGammon von der Homepage von JGammon
+		herunter.Links und weitere Informationen erhalten sie unter <u>jgam.sourceforge.net</u>.
+		Laden Sie entweder die &uuml;bersetzten Daten (<code>JGammon<i>Release</i>.zip</code>)
+		oder den Quellcode (<code>JGammon<i>Release</i>.src.zip</code>) herunter.<br>&nbsp;
+	</li>
+	<li>Entpacken Sie die erhaltene Datei in ein neues Verzeichnis. Unter Linux geht
+		das z.B mit <code>unzip</code>, unter Windows mit dem Explorer.<br>&nbsp;
+	</li>
+	<li>Wenn Sie den Quelltext erhalten haben, &ouml;ffnen Sie ein Kommandofenster (z.B.
+		xterm unter Linux, Eingabeaufforderung cmd.exe unter Windows XP, ...)
+		und geben Sie in dem Verzeichnis, das sie erstellt haben, ein[<a name="fnverweis1"><a href="#fn1">1</a></a>]:
+		<pre>
+   ant clean bindist
+</pre>
+	</li>
+	<li>In jedem Fall ist die erstellte oder heruntergeladene Datei JGammon.jar
+		die entscheidende Datei.<br>&nbsp;
+	</li>
+	<li>Um zu testen, ob JGammon gestartet werden kann, geben Sie in einem
+		Kommandofenster im Verzeichnis dvon JGammon.jar ein:
+		<pre>   java -jar JGammon.jar</pre>
+	</li>
+	<li>Das JGammon Hauptfenster erscheint.</li>
+</ol>
+</p>
+
+<hr>
+[<a name="fn1"><a href="#fnverweis1">1</a></a>] Falls Sie kein ANT installiert haben,
+so k&ouml;nnen Sie unter Linux mit <code>javac `find . -name "*.java"`</code> auch
+&uuml;bersetzen. Es entsteht dann jedoch keine g&uuml;ltige JGammon.jar-Datei. Starten Sie
+daher dann JGammon mit <code>java -cp src jgam.JGammon</code>.<br>
+</body>
+</html>

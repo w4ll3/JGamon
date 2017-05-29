@@ -1,0 +1,6 @@
+Reinforcement in board games
+http://www.cs.bris.ac.uk/Publications/Papers/2000100.pdf
+
+Take-Points in Money Games
+by Rick Janowski
+http://www.msoworld.com/mindzine/news/classic/bg/cubeformulae.pdf

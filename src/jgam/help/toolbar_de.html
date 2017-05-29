@@ -1,0 +1,112 @@
+<!-- keywords for this file:
+help; content tree; search; navigation; help system
+-->
+<html>
+<head>
+	<title>JGammon - Backgammon for Java</title>
+</head>
+<body>
+
+<div align="center">
+	<h1>JGammon - Fenster und Dialoge</h1>
+</div>
+<hr>
+<h2>Die Werkzeugleiste</h2>
+<center><img src="toolbar_de.png" width="610" height="42" border="0" alt=""></center>
+
+<p>
+	Die Werkzeugleiste befindet sich unterhalb der Men&uuml;zeile, ist aber frei
+	beweglich und kann mit der Maus bewegt werden, indem man die "Grifffl&auml;che" an
+	der linken Seite bei gedr&uuml;ckter Maustaste bewegt.
+	Die Leiste kann als eigenes Fenster angezeigt werden oder "angedockt"
+	an das Hauptfenster, links, rechts, oben oder unten (empfohlen ist oben).
+</p>
+
+<p>
+	Jedem Schalter ist eine Aktion im Spiel zugeordnet. Ist diese Aktion im Moment
+	nicht verf&uuml;gbar, so wird der Schalter grau gef&auml;rbt und kann nicht gedr&uuml;ckt werden.
+</p>
+
+<p>Die Tasten starten im einzelnen folgende Aktionen:</p>
+<table border="1">
+	<tr>
+		<th>Taste</th>
+		<th>Aktion</th>
+	</tr>
+	<tr>
+		<td align="center"><img src="newgame.png" width="31" height="31" border="0" alt=""></td>
+		<td>Startet ein neues Spiel. Es erscheint der
+			<a href="page:newGameDialog_de.html">Dialog f&uuml;r ein neues Spiel</a>. Sollte gerade
+			bereits ein Spiel laufen, so wird in einem kleinen Dialog gefragt, ob das laufende
+			Spiel abgebrochen werden soll, damit das neue beginnen kann.
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="save.png" width="31" height="31" border="0" alt=""></td>
+		<td>W&auml;hrend eines Spieles kann hiermit die aktuelle Stellung gespeichert werden.
+			Es &ouml;ffnet sich der Speicherdialog, mit dem eine Datei geschrieben werden kann,
+			die den momentanen Spielzustand beschreibt. Damit kann zu einem sp&auml;teren Zeitpunkt
+			genau an der Stelle weitergespielt werden, an der man gespeichert hat.
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="history.png" width="31" height="31" border="0" alt=""></td>
+		<td>W&auml;hrend des Spiels &ouml;ffnet sich bei Bet&auml;tigung das
+			<a href="page:history_de.html">Verlaufsfenster</a>, mit dem das Spiel analysiert
+			werden kann
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="turnboard.png" width="31" height="31" border="0" alt=""></td>
+		<td>Mit dieser Taste kann das Spielbrett um 180� gedreht werden.</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="flipboard.png" width="31" height="31" border="0" alt=""></td>
+		<td>Mit dieser Taste kann das Spielbrett an der Schranke gespiegelt werden.
+			Es werden "rechts" und "links" vertauscht; "oben" und "unten" bleiben aber gleich.
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="swap.png" width="31" height="31" border="0" alt=""></td>
+		<td>Tausche die Farben der Steine der beiden Spieler. Entsprechend werden danach
+			auch die Meldungen anders lauten.
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="chat.png" width="31" height="31" border="0" alt=""></td>
+		<td>W&auml;hrend eines Spiels &uuml;ber das Netzwerk l&auml;sst sich mit diesem Schalter
+			der <a href="page:chatWindow_de.html">Chat-Dialog</a> &ouml;ffnen
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="giveup.png" width="31" height="31" border="0" alt=""></td>
+		<td>F&uuml;r den Fall, dass man ein Spiel aufgeben m&ouml;chte, weil man meint, es nicht
+			mehr zu gewinnen, kann man hier ein Angebot zur Aufgabe machen. Es erscheint ein
+			Dialog, in dem man ausw&auml;hlt, f&uuml;r welche Gewinnstufe man aufgeben m&ouml;chte. Der Gegner
+			kann das Angebot akzeptieren oder ablehnen
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="undo.png" width="31" height="31" border="0" alt=""></td>
+		<td>Wenn man bereits einen oder mehr Steine bewegt hat, so kann man diese Z&uuml;ge
+			r&uuml;ckg&auml;ngig machen. Sobald jedoch der Gegner geworfen/gedoppelt hat, ist dies nicht
+			mehr m&ouml;glich.
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><img src="double.png" width="41" height="31" border="0" alt=""></td>
+		<td>Wenn man denkt, dass eine Stellung au&szlig;erordentlich g&uuml;nstig f&uuml;r sich ist, dann
+			kann man den Spielwert verdoppeln (vgl. <a href="page:rules.html">Regeln</a>). Der
+			Gegner kann entweder annehmen oder ablehnen.
+		</td>
+	</tr>
+	<tr>
+		<td align="left" colspan="2">
+			<img align="left" src="throw_de.png" width="108" height="36" border="0" alt="" style="vertical-align:middle;">
+			Du bist dran: Wirf die W&uuml;rfel.
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>

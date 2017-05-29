@@ -1,0 +1,28 @@
+
+1.0.0
+     Pretty stable JGammon
+
+1.0.50
+     Changed layout
+     new protocol. (YOUPLAY... eliminated)
+     plugable BoardImplementations
+
+1.0.51
+     BoardPainting made more comprehensible
+     Color swapping enabled
+
+1.0.52
+     Resizeable BoardImplementations
+
+1.0.60
+     Rewrite of the game logics
+     New protocol
+
+1.0.63
+     Red leather is finished, now the standard design
+
+1.0.65
+     Introduction of the AI
+    
+1.1.-preX
+     Working on a release version - bugs fixes - help completed

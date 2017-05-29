@@ -1,0 +1,17 @@
+#
+# This is the list of the available BoardImplementations
+#
+# If you create a Board Implementation yourself, ensure you have got a
+# META-INF/services/jgam.board.BoardImplementation file in the jar
+
+#noble leather
+jgam.board.leather.LeatherBoardImplementation
+
+#Chrome blue/white
+jgam.board.bluewhite.BlueWhiteBoardImplementation
+
+#Red/Blue on white
+jgam.board.sketch.SketchBoardImplementation
+
+#Monochrome
+jgam.board.MonochromeBoardImplementation

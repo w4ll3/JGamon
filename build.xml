@@ -1,0 +1,155 @@
+<!--
+ JGammon: A Backgammon client with nice graphics written in Java
+ Copyright (C) 2005 Mattias Ulbrich
+
+ This program is free software; you can redistribute it and/or
+ modify it under the terms of the GNU General Public License
+ as published by the Free Software Foundation; either version 2
+ of the License, or (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ -->
+
+<project name="JGammon - Backgammon for java" default="postcompile" basedir=".">
+
+	<property name="build" value="build" />
+	<property name="src" value="src" />
+	<property name="doc" value="doc" />
+	<property name="targetjre" value="1.8" />
+	<property name="debug" value="true" />
+	<property name="version" value="1.1-pre2" />
+
+	<target name="init">
+		<tstamp />
+		<tstamp>
+		    <format property="COMPLETEDATE" pattern="EEE, d MMM yyyy HH:mm:ss Z"
+		    	locale="en"/>
+        </tstamp>
+		<mkdir dir="${build}" />
+		<mkdir dir="${doc}" />
+	</target>
+
+	<target name="version" depends="init" description="make the file Version.java">
+		<buildnumber />
+		<echo file="${src}/jgam/Version.java">
+			package jgam;
+			public class Version {
+				public static final String VERSION = "${version}";
+				public static final String BUILD_NUMBER = "${build.number}";
+				public static final String BUILD_DATE = "${COMPLETEDATE}";
+			}
+		</echo>
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${src}" destdir="${build}" debug="${debug}" source="1.8" target="${targetjre}" listfiles="true" deprecation="true">
+		</javac>
+	</target>
+
+	<target name="postcompile" depends="compile">
+		<copy todir="${build}">
+			<fileset includes="**/*.png" dir="${src}" />
+			<fileset includes="**/*.gif" dir="${src}" />
+			<fileset includes="**/*.html" dir="${src}" />
+			<fileset includes="**/*.css" dir="${src}" />
+			<fileset includes="**/*.txt" dir="${src}" />
+			<fileset includes="**/*.ser" dir="${src}" />
+			<fileset includes="**/*.properties" dir="${src}" />
+			<fileset includes="META-INF/**" dir="${src}" />
+		</copy>
+	</target>
+
+	<target name="doc">
+		<javadoc version="yes" destDir="${doc}" private="true" windowtitle="JGam" doctitle="JGam" source="1.8">
+			<packageset dir="${src}">
+				<include name="**" />
+			</packageset>
+			<tag name="todo" scope="all" description="To do:" />
+		</javadoc>
+	</target>
+
+	<target name="clean">
+		<delete dir="${build}" />
+	</target>
+
+	<target name="jar" depends="version, postcompile">
+		<tstamp />
+		<jar jarfile="JGammon.jar">
+			<fileset dir="${build}" includes="jgam/**" />
+			<fileset dir="${build}" includes="com/**" />
+			<fileset dir="${build}" includes="META-INF/**" />
+			<manifest>
+				<attribute name="Built-By" value="${user.name}" />
+				<attribute name="Build-Time" value="${TODAY} ${TSTAMP}" />
+				<attribute name="Main-Class" value="jgam.JGammon" />
+			</manifest>
+		</jar>
+	</target>
+
+	<target name="signedjar" depends="jar">
+		<signjar jar="JGammon.jar" alias="mattze" storepass="${passwd}" />
+	</target>
+
+	<target name="bindist" depends="jar">
+		<zip destfile="JGammon.zip">
+			<fileset file="JGammon.jar" />
+			<fileset file="LICENSE.txt" />
+			<fileset file="README.txt" />
+			<fileset file="jgam.properties" />
+			<fileset file="jgammon.exe" />
+		</zip>
+	</target>
+
+	<target name="srcjar" depends="init">
+		<zip destfile="JGammon.src.zip">
+			<zipfileset dir="${src}" prefix="${src}" />
+			<zipfileset dir="test" prefix="test" />
+			<zipfileset dir="train" prefix="train" />
+			<zipfileset dir="documentation" prefix="documentation" />
+			<fileset file="jgammon.ico" />
+			<fileset file="jgammon.exe" />
+			<fileset file="ChangeLog" />
+			<fileset file="build.xml" />
+			<fileset file="LICENSE.txt" />
+			<fileset file="README.txt" />
+			<fileset file="jgam.properties" />
+		</zip>
+	</target>
+
+
+	<target name="fileheader" depends="compile">
+		<java classname="jgam.temp.FileHeaderMaker" classpath="${build}" fork="true">
+			<arg value="${src}" />
+		</java>
+	</target>
+
+
+
+	<target name="train" depends="init">
+		<javac srcdir="train/java" destdir="${build}" debug="${debug}" source="1.8" target="${targetjre}" />
+	</target>
+
+	<target name="trainjar" depends="train, postcompile">
+		<jar jarfile="training.jar">
+			<fileset dir="${build}" includes="jgam/**" />
+			<fileset dir="${build}" includes="*.class" />
+			<fileset dir="${build}" includes="mattze/ann/**" />
+			<manifest>
+				<attribute name="Built-By" value="${user.name}" />
+				<attribute name="Build-Time" value="${TODAY} ${TSTAMP}" />
+			</manifest>
+		</jar>
+	</target>
+
+</project>
+
+<!-- Local Variables: -->
+<!-- mode: xml -->
+<!-- End: -->
